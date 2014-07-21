@@ -1,9 +1,9 @@
 <h2>Countries in <%= continent %></h2>
 
 <ul>
-  <% countries.each do |country| %>
-    <li>
-      <%= country[:name] %>
-    </li>
+  <% countries.select do |country| %>
+
+      <%= country[:name] if country[:continent] == continent %><br>
+
   <% end %>
 </ul>
