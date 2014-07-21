@@ -1,4 +1,26 @@
 <h2> Welcome! </h2>
+<form action="/" method="post">
+<ul>
+  <li>
+    <label for="name">Name</label>
+    <input type="text" name="name"/>
+  </li>
+  <li>
+    <label for="message">Message</label>
+    <input type="text" name="message"/>
+  </li>
+  <li>
+    <input type="submit" value="Add Message"/>
+  </li>
+</ul>
+</form>
+
+<ul>
+<% messages.each do |message| %>
+   <li>Name: <%=message["name"]%></li>
+      <li>Message: <%=message["message"]%></li>
+      <%end%>
+</ul>
 
 <p>We show totally accurate lists of continents and countries!!</p>
 
